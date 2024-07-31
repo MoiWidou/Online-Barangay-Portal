@@ -1,0 +1,100 @@
+/* Animation for the bouncing text */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Animation class for the scroll down text */
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Horizontal animation for the background image */
+@keyframes moveBackground {
+  from {
+      background-position: 0% 50%; /* Start position: left */
+  }
+  to {
+      background-position: 100% 50%; /* End position: right */
+  }
+}
+
+.bg-animation {
+  animation: moveBackground 30s linear infinite;
+  background-size: cover;
+}
+
+/* Vertical animation for the background image */
+@keyframes moveBackgroundVertically {
+  from {
+      background-position: 50% 0%; /* Start position: top */
+  }
+  to {
+      background-position: 50% 100%; /* End position: bottom */
+  }
+}
+
+/* Apply vertical animation only for screens greater than 1200px */
+@media screen and (min-width: 1200px) {
+  .bg-animation {
+      animation: moveBackgroundVertically 30s linear infinite;
+  }
+}
+
+/* Apply blur effect to the background image only */
+.blur-background {
+  filter: blur(2px); /* Adjust the blur value as needed */
+}
+
+/* Text shadow for the text elements */
+.text-shadow {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Dark shadow effect */
+}
+
+/* Logo shadow for the logo image */
+.logo-shadow {
+  filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.6)); /* Dark shadow effect */
+}
+
+/* Semi-transparent overlay */
+.overlay {
+  background: rgba(0, 0, 0, 0.4); /* Adjust the opacity as needed */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .landing-title {
+    font-size: 3rem;
+  }
+  
+  .landing-subtitle {
+    font-size: 1rem;
+  }
+  
+  .landing-button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .landing-title {
+    font-size: 2rem;
+  }
+  
+  .landing-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .landing-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+  
+  .scroll-text {
+    font-size: 0.8rem;
+  }
+}
